@@ -2,17 +2,20 @@ package main
 
 import (
 	"log"
-	"os"
-	"time"
+		"time"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	pb "pb/grpconepb"
+	"saymsg"
+	"os"
 )
 
 const (
 	address     = "localhost:50051"
 	defaultName = "kitty"
 )
+
+
 
 func main() {
 	// Set up a connection to the server.
@@ -30,11 +33,10 @@ func main() {
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.SayHi(ctx, &pb.Say{Name: name, Msg:"hello world!"})
-	if err != nil {
-		log.Fatalf("未响应!: %v", err)
-	}
-	log.Printf("Greeting: %s", r.Body)
+
+	//TODO  待封装成模块化
+	saymsg.SendMsg(c,ctx, name)
+
 }
 
 
