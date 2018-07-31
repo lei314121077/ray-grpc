@@ -5,7 +5,10 @@
 [![PACKAGE](#)](#)
 [![DOC](#)](#)
 
-* 概述[参见](https://www.jianshu.com/p/d27ac8039fff)
+* TODO 期望做到支持和grpc原生协议等
+    * [可参考](https://github.com/grpc-ecosystem/grpc-gateway)
+
+* [GRPC概述](https://grpc.io/docs/quickstart/go.html)
 
 gRPC 是一个高性能、通用的开源RPC框架，其由 Google 主要面向移动应用开发并基于HTTP/2 协议标准而设计，
 基于 ProtoBuf(Protocol Buffers) 序列化协议开发，且支持众多开发语言。
@@ -61,6 +64,20 @@ protoc --go_out=plugins=grpc:. *.proto
 ``` 
 
 
+* 关于protobuf3的接口类型定义
+
+```
+gRPC 定义了四种类型的服务接口:
+一元RPC，客户端向服务器发送请求并获得响应，就像正常的函数调用一样。
+rpc SayHello(HelloRequest) returns (HelloResponse){
+}
+服务器流RPC，客户端发送一个对象服务器端返回一个Stream（流式消息）
+rpc LotsOfReplies(HelloRequest) returns (stream HelloResponse){
+}
+客户端流式RPC，客户端发送一个Stream（流式消息）服务端返回一个对象。
+rpc LotsOfGreetings(stream HelloRequest) returns (HelloResponse) {
+}
+```
 
 
 
