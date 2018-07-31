@@ -5,6 +5,12 @@
 [![PACKAGE](#)](#)
 [![DOC](#)](#)
 
+* 概述[参见](https://www.jianshu.com/p/d27ac8039fff)
+
+gRPC 是一个高性能、通用的开源RPC框架，其由 Google 主要面向移动应用开发并基于HTTP/2 协议标准而设计，
+基于 ProtoBuf(Protocol Buffers) 序列化协议开发，且支持众多开发语言。
+gRPC 的基石就是 HTTP/2，然后在上面使用 protobuf 协议定义好 service RPC.
+
 
 * 项目结构
 

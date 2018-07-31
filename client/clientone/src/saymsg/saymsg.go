@@ -8,8 +8,10 @@ import (
 )
 
 //@name SendMsg
-
-
+//@param pb
+//@paran content
+//@param name
+//@return string
 func SendMsg(c pb.GrpconepbClient, ctx context.Context, name string) string{
 	r, err := c.SayHi(ctx, &pb.Say{Name: name, Msg:"hello world!"})
 	if err != nil {
