@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package grpconepb;
+
+service grpconepb{
+    rpc SayHi(Say)returns (Response);
+}
+
+message Say{
+    string name=1;
+    string msg=2;
+}
+
+message Response{
+    string body=1;
+}
+
+
+
+
+

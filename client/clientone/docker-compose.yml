@@ -1,0 +1,5 @@
+ray_grpc_client_one:
+  image: ray_grpc_client_one
+  container_name: ray_grpc_client_one
+  volumes:
+  - ./:/root/

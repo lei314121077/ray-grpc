@@ -1,0 +1,5 @@
+ray_grpc:
+  image: ray_grpc
+  container_name: ray_grpc
+  volumes:
+  - ./:/root/
