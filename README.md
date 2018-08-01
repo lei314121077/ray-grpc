@@ -18,35 +18,57 @@ gRPC 的基石就是 HTTP/2，然后在上面使用 protobuf 协议定义好 ser
 * 项目结构
 
 ```bash
-.
-├── client
-│   └── clientone
-│       ├── build.sh
-│       ├── clientone.go
-│       ├── docker-compose.yml
-│       └── Dockerfile
-├── main.go
-├── README.md
-├── server
-│   └── serverone
-│       ├── build.sh
-│       ├── docker-compose.yml
-│       ├── Dockerfile
-│       ├── serverone.go
-│       └── src
-│           └── sayapi
-│               ├── sayapi.go
-│               ├── say.go
-│               └── say_test.go
-└── src            # 公共目录,为了方便就都写在一个里面了
-    ├── pb         
-    │   └── grpconepb
-    │       ├── build.sh
-    │       ├── grpconepb.pb.go
-    │       └── grpconepb.proto
-    └── ray        # 个人工具包
-        └── common
-            └── common.go
+..
+ ├── client
+ │   └── clientone
+ │       ├── build.sh
+ │       ├── clientone.go
+ │       ├── docker-compose.yml
+ │       ├── Dockerfile
+ │       └── src
+ │           └── saymsg
+ │               └── saymsg.go
+ ├── main.go
+ ├── README.md
+ ├── server
+ │   ├── serverone
+ │   │   ├── build.sh
+ │   │   ├── docker-compose.yml
+ │   │   ├── Dockerfile
+ │   │   ├── serverone.go
+ │   │   └── src
+ │   │       └── sayapi
+ │   │           ├── sayapi.go
+ │   │           ├── say.go
+ │   │           └── say_test.go
+ │   └── servertwo
+ │       ├── build.sh
+ │       ├── docker-compose.yml
+ │       ├── Dockerfile
+ │       ├── servertwo.go
+ │       └── src
+ │           └── echoapi
+ │               └── echoapi.go
+ └── src
+     ├── pb
+     │   ├── echoserver
+     │   │   ├── build.sh
+     │   │   ├── echoserver.pb.go
+     │   │   ├── echoserver.pb.gw.go
+     │   │   ├── echoserver.proto
+     │   │   ├── gen.go
+     │   │   └── Makefile
+     │   └── grpconepb
+     │       ├── build.sh
+     │       ├── grpconepb.pb.go
+     │       └── grpconepb.proto
+     └── ray
+         ├── common
+         │   └── common.go
+         └── gateway
+             └── wsproxy.go
+ 
+
 
 
 ```
