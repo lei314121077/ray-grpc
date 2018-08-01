@@ -1,12 +1,12 @@
 # [grpc for go github](https://github.com/grpc/grpc-go)
 
-[![API](#)](#)
-[![BEANCHMARK](#)](#)
-[![PACKAGE](#)](#)
-[![DOC](#)](#)
+[![grpc-gateway](https://travis-ci.org/grpc-ecosystem/grpc-gateway.svg?branch=master)](#https://github.com/lei314121077/grpc-gateway)
+[![servertwo Build Status](https://travis-ci.org/grpc-ecosystem/grpc-gateway.svg?branch=master)](https://travis-ci.org/grpc-ecosystem/grpc-gateway)
+[![参考](https://godoc.org/github.com/tmc/grpc-websocket-proxy/wsproxy)](https://github.com/tmc/grpc-websocket-proxy)
 
-* TODO 期望做到支持和grpc原生协议等
-    * [可参考](https://github.com/grpc-ecosystem/grpc-gateway)
+* servertwo 支持httph和tcp websocket 协议
+
+   ![architecture introduction diagram](https://docs.google.com/drawings/d/12hp4CPqrNPFhattL_cIoJptFvlAqm5wLQ0ggqI5mkCg/pub?w=749&amp;h=370)
 
 * [GRPC概述](https://grpc.io/docs/quickstart/go.html)
 
