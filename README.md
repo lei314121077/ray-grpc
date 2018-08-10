@@ -101,6 +101,15 @@ rpc LotsOfGreetings(stream HelloRequest) returns (HelloResponse) {
 }
 ```
 
+## 资料
 
+* [微服务架构文章参考](http://microservices.io/)
+* [微服务架构文章参考](https://studygolang.com/search?q=%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98)
+
+## [apigateway](https://studygolang.com/articles/6230) 的形似
+
+ 对于大多数微服务基础的应用，实现一个API Gateway都是有意义的，它就像是进入系统的一个服务提供点。
+ API Gateway负责请求转发、请求合成和协议转换。它提供给应用客户端一个自定义的API。
+ API Gateway可以通过返回缓存或者默认值的方式来掩盖后端服务的错误。
 
 
