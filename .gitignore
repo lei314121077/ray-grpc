@@ -3,29 +3,12 @@
 *.env
 *.zip
 
-./idea
-/etc
-/sh
-/bin
-/etc/logcfg
-
 /src/github.com
 /src/golang.org
 /src/google.golang.org
 
 README.md
-centerserver.go
-gameserver.go
-gatewayserver.go
-httpgatewayserver.go
-loginserver.go
-monitorserver.go
-roomserver.go
-routeguideserver.go
-comparingcard_test.go
 
-casualgame.env
-casualgame.ini
 
 
 
